@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1773595250649,
+    "description" : "",
+    "identifier" : "CHANGEMSISDN",
+    "lastModifiedTimestamp" : 1773595250649,
+    "name" : "CHANGE_MSISDN",
+    "versionCount" : 0
+  },
+  "latest" : false
+}

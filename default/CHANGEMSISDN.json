@@ -3278,6 +3278,7 @@
       },
       "properties" : {
         "OLD_MSISDN" : "${OLD_MSISDN:replaceAll('[\\\\[\\\\]\\\"]', '')}",
+        "filename" : "${filename}",
         "Store State" : "Do not store state",
         "canonical-value-lookup-cache-size" : "100",
         "NEW_MSISDN" : "${NEW_MSISDN:replaceAll('[\\\\[\\\\]\\\"]', '')}"
@@ -3295,6 +3296,13 @@
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "filename" : {
+          "displayName" : "filename",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "filename",
           "sensitive" : false
         },
         "Store State" : {

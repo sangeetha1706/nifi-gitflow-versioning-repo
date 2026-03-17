@@ -1,14 +1,5 @@
 {
-  "externalControllerServices" : {
-    "7b4c9a98-9444-3ca7-a4a7-7da9e3ac8828" : {
-      "identifier" : "7b4c9a98-9444-3ca7-a4a7-7da9e3ac8828",
-      "name" : "Kafka3ConnectionService"
-    },
-    "b04a188f-dfb8-390f-8573-d178a37c5ddf" : {
-      "identifier" : "b04a188f-dfb8-390f-8573-d178a37c5ddf",
-      "name" : "DBCPConnectionPool_RIGHTEL"
-    }
-  },
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1773595250649,
     "description" : "",
@@ -88,36 +79,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "3f270378-96dd-3259-b051-6910d2b9555b",
-        "name" : "PutFile",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "043acf2b-1e05-3ee7-944e-0e03eee91084",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "05f5a11d-4cbe-3699-b087-2bf4d9cbdd59",
-        "name" : "ExecuteSQL",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "4314efe2-5807-379f-87a4-beaefc082eec",
         "name" : "EvaluateJsonPath",
         "type" : "PROCESSOR"
@@ -137,6 +98,36 @@
         "groupId" : "flow-contents-group",
         "id" : "25cbf2bd-a992-3bf9-8f66-3949c9678357",
         "name" : "GetFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3f270378-96dd-3259-b051-6910d2b9555b",
+        "name" : "PutFile",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "043acf2b-1e05-3ee7-944e-0e03eee91084",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "05f5a11d-4cbe-3699-b087-2bf4d9cbdd59",
+        "name" : "ExecuteSQL",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -304,8 +295,8 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f0e09827-d8a3-3834-89ab-33e09595b8a5",
-      "labelIndex" : 0,
+      "identifier" : "45d10982-758b-3a40-97b3-00da7c5473a9",
+      "labelIndex" : 1,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
@@ -315,8 +306,8 @@
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "f30bcc77-2a76-301b-b432-b425a2e4aa63",
-        "name" : "GetFile",
+        "id" : "3c81e6ee-8a17-3bee-a946-4cb02cade2b4",
+        "name" : "GenerateFlowFile",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -334,8 +325,8 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "45d10982-758b-3a40-97b3-00da7c5473a9",
-      "labelIndex" : 1,
+      "identifier" : "f0e09827-d8a3-3834-89ab-33e09595b8a5",
+      "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
@@ -345,8 +336,8 @@
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "3c81e6ee-8a17-3bee-a946-4cb02cade2b4",
-        "name" : "GenerateFlowFile",
+        "id" : "f30bcc77-2a76-301b-b432-b425a2e4aa63",
+        "name" : "GetFile",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -477,7 +468,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
           },
           "sensitive" : false
         },
@@ -1265,7 +1256,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
           },
           "sensitive" : false
         },
@@ -1291,16 +1282,7 @@
     "defaultBackPressureObjectThreshold" : 10000,
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
-    "externalControllerServiceReferences" : {
-      "7b4c9a98-9444-3ca7-a4a7-7da9e3ac8828" : {
-        "identifier" : "7b4c9a98-9444-3ca7-a4a7-7da9e3ac8828",
-        "name" : "Kafka3ConnectionService"
-      },
-      "b04a188f-dfb8-390f-8573-d178a37c5ddf" : {
-        "identifier" : "b04a188f-dfb8-390f-8573-d178a37c5ddf",
-        "name" : "DBCPConnectionPool_RIGHTEL"
-      }
-    },
+    "externalControllerServiceReferences" : { },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ ],
@@ -1621,36 +1603,6 @@
         "zIndex" : 0
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "270aa675-caeb-3783-bbf3-ed0db801c615",
-          "id" : "714ac61f-7380-305d-b12e-2e419bee3812",
-          "name" : "RouteOnAttribute",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "270aa675-caeb-3783-bbf3-ed0db801c615",
-        "identifier" : "f18c47ce-a019-3cfa-8546-03e904a6997f",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "270aa675-caeb-3783-bbf3-ed0db801c615",
-          "id" : "cd36c8c7-04a1-3bc3-ad06-b2c23dcbbebb",
-          "name" : "ExecuteSQL",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 4
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 100,
         "bends" : [ ],
         "componentType" : "CONNECTION",
@@ -1679,6 +1631,36 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "270aa675-caeb-3783-bbf3-ed0db801c615",
+          "id" : "714ac61f-7380-305d-b12e-2e419bee3812",
+          "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "270aa675-caeb-3783-bbf3-ed0db801c615",
+        "identifier" : "f18c47ce-a019-3cfa-8546-03e904a6997f",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "270aa675-caeb-3783-bbf3-ed0db801c615",
+          "id" : "cd36c8c7-04a1-3bc3-ad06-b2c23dcbbebb",
+          "name" : "ExecuteSQL",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 4
       } ],
       "controllerServices" : [ ],
       "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -1920,6 +1902,88 @@
         "type" : "org.apache.nifi.processors.standard.PutFile",
         "yieldDuration" : "1 sec"
       }, {
+        "autoTerminatedRelationships" : [ "permission.denied", "not.found" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.3.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "270aa675-caeb-3783-bbf3-ed0db801c615",
+        "identifier" : "a1ed28b6-8f2d-3249-b84e-0789d6d67478",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "FetchFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 2048.0,
+          "y" : 1064.0
+        },
+        "properties" : {
+          "Move Conflict Strategy" : "Rename",
+          "Log level when file not found" : "ERROR",
+          "Log level when permission denied" : "ERROR",
+          "File to Fetch" : "#{DECODE_DEST}/CHANGE_MSISDN/RETRY_SOURCE_1/${filename}",
+          "Completion Strategy" : "Delete File"
+        },
+        "propertyDescriptors" : {
+          "Move Conflict Strategy" : {
+            "displayName" : "Move Conflict Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Move Conflict Strategy",
+            "sensitive" : false
+          },
+          "Log level when file not found" : {
+            "displayName" : "Log level when file not found",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log level when file not found",
+            "sensitive" : false
+          },
+          "Move Destination Directory" : {
+            "displayName" : "Move Destination Directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Move Destination Directory",
+            "sensitive" : false
+          },
+          "Log level when permission denied" : {
+            "displayName" : "Log level when permission denied",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log level when permission denied",
+            "sensitive" : false
+          },
+          "File to Fetch" : {
+            "displayName" : "File to Fetch",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "File to Fetch",
+            "sensitive" : false
+          },
+          "Completion Strategy" : {
+            "displayName" : "Completion Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Completion Strategy",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 0,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.FetchFile",
+        "yieldDuration" : "1 sec"
+      }, {
         "autoTerminatedRelationships" : [ "success", "failure" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -2012,88 +2076,6 @@
         "schedulingStrategy" : "TIMER_DRIVEN",
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.PutFile",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "permission.denied", "not.found" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.3.0"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "270aa675-caeb-3783-bbf3-ed0db801c615",
-        "identifier" : "a1ed28b6-8f2d-3249-b84e-0789d6d67478",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "FetchFile",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 2048.0,
-          "y" : 1064.0
-        },
-        "properties" : {
-          "Move Conflict Strategy" : "Rename",
-          "Log level when file not found" : "ERROR",
-          "Log level when permission denied" : "ERROR",
-          "File to Fetch" : "#{DECODE_DEST}/CHANGE_MSISDN/RETRY_SOURCE_1/${filename}",
-          "Completion Strategy" : "Delete File"
-        },
-        "propertyDescriptors" : {
-          "Move Conflict Strategy" : {
-            "displayName" : "Move Conflict Strategy",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Move Conflict Strategy",
-            "sensitive" : false
-          },
-          "Log level when file not found" : {
-            "displayName" : "Log level when file not found",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log level when file not found",
-            "sensitive" : false
-          },
-          "Move Destination Directory" : {
-            "displayName" : "Move Destination Directory",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Move Destination Directory",
-            "sensitive" : false
-          },
-          "Log level when permission denied" : {
-            "displayName" : "Log level when permission denied",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log level when permission denied",
-            "sensitive" : false
-          },
-          "File to Fetch" : {
-            "displayName" : "File to Fetch",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "File to Fetch",
-            "sensitive" : false
-          },
-          "Completion Strategy" : {
-            "displayName" : "Completion Strategy",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Completion Strategy",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 0,
-        "runDurationMillis" : 0,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.FetchFile",
         "yieldDuration" : "1 sec"
       }, {
         "autoTerminatedRelationships" : [ "success", "failure" ],
@@ -2371,13 +2353,6 @@
             "name" : "SQL Query",
             "sensitive" : false
           },
-          "Database Connection Pooling Service" : {
-            "displayName" : "Database Connection Pooling Service",
-            "dynamic" : false,
-            "identifiesControllerService" : true,
-            "name" : "Database Connection Pooling Service",
-            "sensitive" : false
-          },
           "sql-post-query" : {
             "displayName" : "SQL Post-Query",
             "dynamic" : false,
@@ -2553,6 +2528,88 @@
         "type" : "org.apache.nifi.processors.standard.PutFile",
         "yieldDuration" : "1 sec"
       }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.3.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "270aa675-caeb-3783-bbf3-ed0db801c615",
+        "identifier" : "e458f606-80a7-3134-b9d7-655c5f036782",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "FetchFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 832.0,
+          "y" : 1064.0
+        },
+        "properties" : {
+          "Move Conflict Strategy" : "Rename",
+          "Log level when file not found" : "ERROR",
+          "Log level when permission denied" : "ERROR",
+          "File to Fetch" : "#{DECODE_DEST}/CHANGE_MSISDN/RETRY_SOURCE_1/${filename}",
+          "Completion Strategy" : "Delete File"
+        },
+        "propertyDescriptors" : {
+          "Move Conflict Strategy" : {
+            "displayName" : "Move Conflict Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Move Conflict Strategy",
+            "sensitive" : false
+          },
+          "Log level when file not found" : {
+            "displayName" : "Log level when file not found",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log level when file not found",
+            "sensitive" : false
+          },
+          "Move Destination Directory" : {
+            "displayName" : "Move Destination Directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Move Destination Directory",
+            "sensitive" : false
+          },
+          "Log level when permission denied" : {
+            "displayName" : "Log level when permission denied",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log level when permission denied",
+            "sensitive" : false
+          },
+          "File to Fetch" : {
+            "displayName" : "File to Fetch",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "File to Fetch",
+            "sensitive" : false
+          },
+          "Completion Strategy" : {
+            "displayName" : "Completion Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Completion Strategy",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 0,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.FetchFile",
+        "yieldDuration" : "1 sec"
+      }, {
         "autoTerminatedRelationships" : [ "success" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -2646,88 +2703,6 @@
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.PutFile",
         "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.3.0"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "270aa675-caeb-3783-bbf3-ed0db801c615",
-        "identifier" : "e458f606-80a7-3134-b9d7-655c5f036782",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "FetchFile",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 832.0,
-          "y" : 1064.0
-        },
-        "properties" : {
-          "Move Conflict Strategy" : "Rename",
-          "Log level when file not found" : "ERROR",
-          "Log level when permission denied" : "ERROR",
-          "File to Fetch" : "#{DECODE_DEST}/CHANGE_MSISDN/RETRY_SOURCE_1/${filename}",
-          "Completion Strategy" : "Delete File"
-        },
-        "propertyDescriptors" : {
-          "Move Conflict Strategy" : {
-            "displayName" : "Move Conflict Strategy",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Move Conflict Strategy",
-            "sensitive" : false
-          },
-          "Log level when file not found" : {
-            "displayName" : "Log level when file not found",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log level when file not found",
-            "sensitive" : false
-          },
-          "Move Destination Directory" : {
-            "displayName" : "Move Destination Directory",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Move Destination Directory",
-            "sensitive" : false
-          },
-          "Log level when permission denied" : {
-            "displayName" : "Log level when permission denied",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log level when permission denied",
-            "sensitive" : false
-          },
-          "File to Fetch" : {
-            "displayName" : "File to Fetch",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "File to Fetch",
-            "sensitive" : false
-          },
-          "Completion Strategy" : {
-            "displayName" : "Completion Strategy",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Completion Strategy",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 0,
-        "runDurationMillis" : 0,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.FetchFile",
-        "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
@@ -2799,13 +2774,6 @@
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "SQL Query",
-          "sensitive" : false
-        },
-        "Database Connection Pooling Service" : {
-          "displayName" : "Database Connection Pooling Service",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Database Connection Pooling Service",
           "sensitive" : false
         },
         "sql-post-query" : {
@@ -3266,180 +3234,6 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
-        "artifact" : "nifi-kafka-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.3.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "fcba0cfc-019c-1000-4ea2-0ac8c88a64f2",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "ConsumeKafka",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -64.0,
-        "y" : -384.0
-      },
-      "properties" : {
-        "Topics" : "changeMsisdn",
-        "Commit Offsets" : "true",
-        "Key Format" : "byte-array",
-        "Key Attribute Encoding" : "utf-8",
-        "Topic Format" : "names",
-        "Header Encoding" : "UTF-8",
-        "Max Uncommitted Time" : "100 millis",
-        "Kafka Connection Service" : "7b4c9a98-9444-3ca7-a4a7-7da9e3ac8828",
-        "Separate By Key" : "false",
-        "Processing Strategy" : "FLOW_FILE",
-        "Group ID" : "changeMsisdn_new1111",
-        "auto.offset.reset" : "earliest",
-        "Output Strategy" : "USE_VALUE"
-      },
-      "propertyDescriptors" : {
-        "Topics" : {
-          "displayName" : "Topics",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Topics",
-          "sensitive" : false
-        },
-        "Commit Offsets" : {
-          "displayName" : "Commit Offsets",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Commit Offsets",
-          "sensitive" : false
-        },
-        "Header Name Pattern" : {
-          "displayName" : "Header Name Pattern",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Header Name Pattern",
-          "sensitive" : false
-        },
-        "Key Format" : {
-          "displayName" : "Key Format",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Key Format",
-          "sensitive" : false
-        },
-        "Key Record Reader" : {
-          "displayName" : "Key Record Reader",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Key Record Reader",
-          "sensitive" : false
-        },
-        "Message Demarcator" : {
-          "displayName" : "Message Demarcator",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Message Demarcator",
-          "sensitive" : false
-        },
-        "Record Reader" : {
-          "displayName" : "Record Reader",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Record Reader",
-          "sensitive" : false
-        },
-        "Key Attribute Encoding" : {
-          "displayName" : "Key Attribute Encoding",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Key Attribute Encoding",
-          "sensitive" : false
-        },
-        "Topic Format" : {
-          "displayName" : "Topic Format",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Topic Format",
-          "sensitive" : false
-        },
-        "Header Encoding" : {
-          "displayName" : "Header Encoding",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Header Encoding",
-          "sensitive" : false
-        },
-        "Max Uncommitted Time" : {
-          "displayName" : "Max Uncommitted Time",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Max Uncommitted Time",
-          "sensitive" : false
-        },
-        "Kafka Connection Service" : {
-          "displayName" : "Kafka Connection Service",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Kafka Connection Service",
-          "sensitive" : false
-        },
-        "Separate By Key" : {
-          "displayName" : "Separate By Key",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Separate By Key",
-          "sensitive" : false
-        },
-        "Processing Strategy" : {
-          "displayName" : "Processing Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Processing Strategy",
-          "sensitive" : false
-        },
-        "Record Writer" : {
-          "displayName" : "Record Writer",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Record Writer",
-          "sensitive" : false
-        },
-        "Group ID" : {
-          "displayName" : "Group ID",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Group ID",
-          "sensitive" : false
-        },
-        "auto.offset.reset" : {
-          "displayName" : "Auto Offset Reset",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "auto.offset.reset",
-          "sensitive" : false
-        },
-        "Output Strategy" : {
-          "displayName" : "Output Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Output Strategy",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.kafka.processors.ConsumeKafka",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
         "version" : "2.3.0"
@@ -3552,7 +3346,7 @@
         "character-set" : "UTF-8",
         "File Size" : "0B",
         "generate-ff-custom-text" : "{\n\t\"parameters\": [\n\t\t{\n\t\t\t\"name\": \"TRANSACTION_ID\",\n\t\t\t\"value\": \"12w2w567wd891001\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"NEW_MSISDN\",\n\t\t\t\"value\": \"98703060615\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"OLD_MSISDN\",\n\t\t\t\"value\": \"98703060616\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"LANGUAGE_ID\",\n\t\t\t\"value\": \"1\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"CHANNEL\",\n\t\t\t\"value\": \"CRM\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"X-Trace-Id\",\n\t\t\t\"value\": \"12w2w567wd891001\"\n\t\t}\n\t]\n}",
-        "Batch Size" : "1",
+        "Batch Size" : "10000",
         "Unique FlowFiles" : "false",
         "Data Format" : "Text"
       },
@@ -3610,7 +3404,7 @@
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 0,
-      "scheduledState" : "DISABLED",
+      "scheduledState" : "ENABLED",
       "schedulingPeriod" : "1 min",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
@@ -3812,13 +3606,6 @@
           "name" : "Max Uncommitted Time",
           "sensitive" : false
         },
-        "Kafka Connection Service" : {
-          "displayName" : "Kafka Connection Service",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Kafka Connection Service",
-          "sensitive" : false
-        },
         "Separate By Key" : {
           "displayName" : "Separate By Key",
           "dynamic" : false,
@@ -3870,6 +3657,100 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.kafka.processors.ConsumeKafka",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3f270378-96dd-3259-b051-6910d2b9555b",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "PutFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1240.0,
+        "y" : 320.0
+      },
+      "properties" : {
+        "Create Missing Directories" : "true",
+        "Directory" : "#{ERROR}/CHANGE_MSISDN/EXECUTE_SQL_2/${now():format('yyyy-MM-dd')}/${now():format('HH')}",
+        "Conflict Resolution Strategy" : "fail"
+      },
+      "propertyDescriptors" : {
+        "Group" : {
+          "displayName" : "Group",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Group",
+          "sensitive" : false
+        },
+        "Owner" : {
+          "displayName" : "Owner",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Owner",
+          "sensitive" : false
+        },
+        "Create Missing Directories" : {
+          "displayName" : "Create Missing Directories",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Create Missing Directories",
+          "sensitive" : false
+        },
+        "Permissions" : {
+          "displayName" : "Permissions",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Permissions",
+          "sensitive" : false
+        },
+        "Maximum File Count" : {
+          "displayName" : "Maximum File Count",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Count",
+          "sensitive" : false
+        },
+        "Last Modified Time" : {
+          "displayName" : "Last Modified Time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Last Modified Time",
+          "sensitive" : false
+        },
+        "Directory" : {
+          "displayName" : "Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Directory",
+          "sensitive" : false
+        },
+        "Conflict Resolution Strategy" : {
+          "displayName" : "Conflict Resolution Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Conflict Resolution Strategy",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 0,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.PutFile",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -3998,100 +3879,6 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.GetFile",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ "success", "failure" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.3.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "3f270378-96dd-3259-b051-6910d2b9555b",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "PutFile",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 1240.0,
-        "y" : 320.0
-      },
-      "properties" : {
-        "Create Missing Directories" : "true",
-        "Directory" : "#{ERROR}/CHANGE_MSISDN/EXECUTE_SQL_2/${now():format('yyyy-MM-dd')}/${now():format('HH')}",
-        "Conflict Resolution Strategy" : "fail"
-      },
-      "propertyDescriptors" : {
-        "Group" : {
-          "displayName" : "Group",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Group",
-          "sensitive" : false
-        },
-        "Owner" : {
-          "displayName" : "Owner",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Owner",
-          "sensitive" : false
-        },
-        "Create Missing Directories" : {
-          "displayName" : "Create Missing Directories",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Create Missing Directories",
-          "sensitive" : false
-        },
-        "Permissions" : {
-          "displayName" : "Permissions",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Permissions",
-          "sensitive" : false
-        },
-        "Maximum File Count" : {
-          "displayName" : "Maximum File Count",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Maximum File Count",
-          "sensitive" : false
-        },
-        "Last Modified Time" : {
-          "displayName" : "Last Modified Time",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Last Modified Time",
-          "sensitive" : false
-        },
-        "Directory" : {
-          "displayName" : "Directory",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Directory",
-          "sensitive" : false
-        },
-        "Conflict Resolution Strategy" : {
-          "displayName" : "Conflict Resolution Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Conflict Resolution Strategy",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 0,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.PutFile",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],

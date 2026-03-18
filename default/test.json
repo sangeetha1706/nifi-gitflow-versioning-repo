@@ -258,7 +258,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
           },
           "sensitive" : false
         },
@@ -384,7 +384,7 @@
       "retryCount" : 10,
       "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "10 sec",
+      "schedulingPeriod" : "1 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
@@ -518,7 +518,7 @@
           "name" : "Footer File",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "TEXT", "FILE" ]
+            "resourceTypes" : [ "FILE", "TEXT" ]
           },
           "sensitive" : false
         },
@@ -536,7 +536,7 @@
           "name" : "Demarcator File",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "TEXT", "FILE" ]
+            "resourceTypes" : [ "FILE", "TEXT" ]
           },
           "sensitive" : false
         },
@@ -561,7 +561,7 @@
           "name" : "Header File",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "TEXT", "FILE" ]
+            "resourceTypes" : [ "FILE", "TEXT" ]
           },
           "sensitive" : false
         },
@@ -743,7 +743,7 @@
       "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ ],
+      "autoTerminatedRelationships" : [ "success" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -940,7 +940,7 @@
       "retryCount" : 10,
       "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "10 sec",
+      "schedulingPeriod" : "1 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",

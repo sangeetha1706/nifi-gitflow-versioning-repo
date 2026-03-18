@@ -159,7 +159,7 @@
         "dbcp-min-evictable-idle-time" : "30 mins",
         "Max Total Connections" : "8",
         "dbcp-max-conn-lifetime" : "-1",
-        "Database Connection URL" : "jdbc:mysql://10.0.0.99:3306/test?allowLoadLocalInfile=true",
+        "Database Connection URL" : "jdbc:mysql://10.0.0.69:3306/test?allowLoadLocalInfile=true",
         "dbcp-time-between-eviction-runs" : "-1",
         "Database User" : "ruleuser",
         "dbcp-soft-min-evictable-idle-time" : "-1",
@@ -258,7 +258,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
+            "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
           },
           "sensitive" : false
         },
@@ -417,7 +417,7 @@
         "Attribute Strategy" : "Keep Only Common Attributes",
         "FlowFile Insertion Strategy" : "Last in Bin",
         "Compression Level" : "1",
-        "Maximum Number of Entries" : "100",
+        "Maximum Number of Entries" : "150",
         "Minimum Group Size" : "0 B",
         "Maximum number of Bins" : "5",
         "Tar Modified Time" : "${file.lastModifiedTime}",
@@ -518,7 +518,7 @@
           "name" : "Footer File",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
+            "resourceTypes" : [ "TEXT", "FILE" ]
           },
           "sensitive" : false
         },
@@ -536,7 +536,7 @@
           "name" : "Demarcator File",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
+            "resourceTypes" : [ "TEXT", "FILE" ]
           },
           "sensitive" : false
         },
@@ -561,7 +561,7 @@
           "name" : "Header File",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
+            "resourceTypes" : [ "TEXT", "FILE" ]
           },
           "sensitive" : false
         },
